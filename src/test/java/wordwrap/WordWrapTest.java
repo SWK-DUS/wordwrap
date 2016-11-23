@@ -16,11 +16,6 @@ public class WordWrapTest {
      */
 
     @Test
-    public void nothing() {
-        assertThat(true, is(true));
-    }
-
-    @Test
     public void empty(){
         assertThat(WordWrap.wrap("",0),equalTo(""));
     }
