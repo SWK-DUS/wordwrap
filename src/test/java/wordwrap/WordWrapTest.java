@@ -93,6 +93,11 @@ public class WordWrapTest {
         assertWrapped("a b c d e", 5, "a b c\nd e");
     }
 
+    @Test
+    public void acceptanceTest() {
+        assertWrapped("Four score and seven years ago our fathers brought forth upon this continent", 7, "Four\nscore\nand\nseven\nyears\nago our\nfathers\nbrought\nforth\nupon\nthis\ncontine\nnt");
+    }
+
     private void assertWrapped(String input, int wrapAt, String wrappedText) {
         assertThat(wrap(input, wrapAt), equalTo(wrappedText));
     }
