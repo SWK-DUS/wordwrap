@@ -54,8 +54,13 @@ public class WordWrapTest {
     }
 
     @Test
-    public void threeCharacters_wrappedAtOne_returns3HardWrappedString() {
+    public void threeCharacters_wrappedAtOne_returns3HardWrappedStrings() {
         assertWrapped("abc", 1, "a\nb\nc");
+    }
+
+    @Test
+    public void sevenCharacters_wrappedAtTwo_returns4HardWrappedStrings() {
+        assertWrapped("abcdefg", 2, "ab\ncd\nef\ng");
     }
 
     private void assertWrapped(String input, int wrapAt, String wrappedText) {
