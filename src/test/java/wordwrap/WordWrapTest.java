@@ -73,6 +73,10 @@ public class WordWrapTest {
         assertWrapped("a b", 2, "a\nb");
     }
 
+    @Test
+    public void goBackToPreviousSpace() {
+        assertWrapped("a bc", 3, "a\nbc");
+    }
 
     private void assertWrapped(String input, int wrapAt, String wrappedText) {
         assertThat(wrap(input, wrapAt), equalTo(wrappedText));
