@@ -17,7 +17,7 @@ public class WordWrapTest {
      */
 
     @Test
-    public void empty(){
+    public void emptyString_isReturnedAsItIs(){
         assertWrapped("", 0, "");
         assertWrapped("", 1, "");
     }
