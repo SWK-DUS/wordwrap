@@ -19,4 +19,6 @@ public class WordWrapTest {
     public void nothing() {
         assertThat(true, is(true));
     }
+
+    
 }
