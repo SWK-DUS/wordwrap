@@ -21,6 +21,8 @@ public class WordWrapTest {
         assertThat(WordWrap.wrap("",1),equalTo(""));
     }
 
-    //@Test
-    //public void e
+    @Test
+    public void singleCharacter_wrappedAtOne_returnsSameString() {
+        assertThat(WordWrap.wrap("a", 1), equalTo("a"));
+    }
 }
