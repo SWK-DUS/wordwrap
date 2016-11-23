@@ -20,5 +20,8 @@ public class WordWrapTest {
         assertThat(true, is(true));
     }
 
-    
+    @Test
+    public void empty(){
+        assertThat(WordWrap.wrap("",0),equalTo(""));
+    }
 }
