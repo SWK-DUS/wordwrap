@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
+import static wordwrap.WordWrap.wrap;
 
 public class WordWrapTest {
 
@@ -27,6 +28,6 @@ public class WordWrapTest {
     }
 
     private void assertWrapped(String input, int wrapAt, String wrappedText) {
-        assertThat(WordWrap.wrap(input, wrapAt), equalTo(wrappedText));
+        assertThat(wrap(input, wrapAt), equalTo(wrappedText));
     }
 }
