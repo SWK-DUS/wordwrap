@@ -17,12 +17,16 @@ public class WordWrapTest {
 
     @Test
     public void empty(){
-        assertThat(WordWrap.wrap("",0),equalTo(""));
-        assertThat(WordWrap.wrap("",1),equalTo(""));
+        assertWrapped("", 0, "");
+        assertWrapped("", 1, "");
     }
 
     @Test
     public void singleCharacter_wrappedAtOne_returnsSameString() {
-        assertThat(WordWrap.wrap("a", 1), equalTo("a"));
+        assertWrapped("a", 1, "a");
+    }
+
+    private void assertWrapped(String input, int wrapAt, String wrappedText) {
+        assertThat(WordWrap.wrap(input, wrapAt), equalTo(wrappedText));
     }
 }
