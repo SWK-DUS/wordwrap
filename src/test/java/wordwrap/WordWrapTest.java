@@ -32,6 +32,12 @@ public class WordWrapTest {
         assertWrapped("ab",1,"a\nb");
     }
 
+
+    @Test
+    public void twoCharaterString_wrappedAtTwo_returnsSameString(){
+        assertWrapped("ab", 2, "ab");
+    }
+
     private void assertWrapped(String input, int wrapAt, String wrappedText) {
         assertThat(wrap(input, wrapAt), equalTo(wrappedText));
     }
