@@ -74,7 +74,7 @@ public class WordWrapTest {
     }
 
     @Test
-    public void goBackToPreviousSpace() {
+    public void threeCharacters_withSpaceAfterFirst_wrappedAtThree_wrapsAtSpace() {
         assertWrapped("a bc", 3, "a\nbc");
     }
 
