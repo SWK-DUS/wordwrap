@@ -63,6 +63,11 @@ public class WordWrapTest {
         assertWrapped("abcdefg", 2, "ab\ncd\nef\ng");
     }
 
+    @Test
+    public void twoCharactersWithSpace_wrappedAtOne_returnsTwoWrappedCharacters(){
+        assertWrapped("a b", 1, "a\nb");
+    }
+
     private void assertWrapped(String input, int wrapAt, String wrappedText) {
         assertThat(wrap(input, wrapAt), equalTo(wrappedText));
     }
