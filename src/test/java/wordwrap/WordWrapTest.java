@@ -18,5 +18,9 @@ public class WordWrapTest {
     @Test
     public void empty(){
         assertThat(WordWrap.wrap("",0),equalTo(""));
+        assertThat(WordWrap.wrap("",1),equalTo(""));
     }
+
+    //@Test
+    //public void e
 }
