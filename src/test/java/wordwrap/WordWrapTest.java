@@ -53,6 +53,11 @@ public class WordWrapTest {
         assertWrapped("abcd", 2, "ab\ncd");
     }
 
+    @Test
+    public void threeCharacters_wrappedAtOne_returns3HardWrappedString() {
+        assertWrapped("abc", 1, "a\nb\nc");
+    }
+
     private void assertWrapped(String input, int wrapAt, String wrappedText) {
         assertThat(wrap(input, wrapAt), equalTo(wrappedText));
     }
