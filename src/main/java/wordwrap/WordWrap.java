@@ -6,7 +6,7 @@ public class WordWrap {
             return text;
         }
 
-        int indexOfLastSpace = text.lastIndexOf(" ");
+        int indexOfLastSpace = text.lastIndexOf(" ", length);
         if(indexOfLastSpace == -1) {
             indexOfLastSpace = length;
         }

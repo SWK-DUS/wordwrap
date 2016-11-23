@@ -88,6 +88,11 @@ public class WordWrapTest {
         assertWrapped("a b c", 4, "a b\nc");
     }
 
+    @Test
+    public void fiveCharactersWithSpaces_wrappedAtFive_wrapsAtLastSpaceBeforeLength() {
+        assertWrapped("a b c d e", 5, "a b c\nd e");
+    }
+
     private void assertWrapped(String input, int wrapAt, String wrappedText) {
         assertThat(wrap(input, wrapAt), equalTo(wrappedText));
     }
