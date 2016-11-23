@@ -78,6 +78,11 @@ public class WordWrapTest {
         assertWrapped("a bc", 3, "a\nbc");
     }
 
+    @Test
+    public void fourCharacters_withSpaceAfterSecond_wrappedAtFour_wrapsAtSpace() {
+        assertWrapped("ab cd", 4, "ab\ncd");
+    }
+
     private void assertWrapped(String input, int wrapAt, String wrappedText) {
         assertThat(wrap(input, wrapAt), equalTo(wrappedText));
     }
