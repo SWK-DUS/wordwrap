@@ -95,7 +95,10 @@ public class WordWrapTest {
 
     @Test
     public void acceptanceTest() {
-        assertWrapped("Four score and seven years ago our fathers brought forth upon this continent", 7, "Four\nscore\nand\nseven\nyears\nago our\nfathers\nbrought\nforth\nupon\nthis\ncontine\nnt");
+        assertWrapped(
+                "Four score and seven years ago our fathers brought forth upon this continent",
+                7,
+                "Four\nscore\nand\nseven\nyears\nago our\nfathers\nbrought\nforth\nupon\nthis\ncontine\nnt");
     }
 
     private void assertWrapped(String input, int wrapAt, String wrappedText) {
