@@ -6,12 +6,12 @@ public class WordWrap {
             return text;
         }
 
-        int indexOfFirstSpace = text.indexOf(" ");
-        if(indexOfFirstSpace == -1) {
-            indexOfFirstSpace = length;
+        int indexOfLastSpace = text.lastIndexOf(" ");
+        if(indexOfLastSpace == -1) {
+            indexOfLastSpace = length;
         }
 
-        return text.substring(0, indexOfFirstSpace).trim() + "\n" +
-                wrap(text.substring(indexOfFirstSpace).trim(),length);
+        return text.substring(0, indexOfLastSpace).trim() + "\n" +
+                wrap(text.substring(indexOfLastSpace).trim(),length);
     }
 }

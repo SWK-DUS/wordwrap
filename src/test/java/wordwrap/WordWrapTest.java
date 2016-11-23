@@ -83,6 +83,11 @@ public class WordWrapTest {
         assertWrapped("ab cd", 4, "ab\ncd");
     }
 
+    @Test
+    public void ignoresSpaceWithInLength() {
+        assertWrapped("a b c", 4, "a b\nc");
+    }
+
     private void assertWrapped(String input, int wrapAt, String wrappedText) {
         assertThat(wrap(input, wrapAt), equalTo(wrappedText));
     }
