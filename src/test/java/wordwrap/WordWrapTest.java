@@ -84,7 +84,7 @@ public class WordWrapTest {
     }
 
     @Test
-    public void ignoresSpaceWithInLength() {
+    public void fiveCharacterWithTwoSpaces_wrappedAtFour_wrapesAtSecondSpace() {
         assertWrapped("a b c", 4, "a b\nc");
     }
 
